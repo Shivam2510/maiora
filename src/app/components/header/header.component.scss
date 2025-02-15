@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 16px;
+    color: white;
+
+    span{
+        font-size: 12px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+}

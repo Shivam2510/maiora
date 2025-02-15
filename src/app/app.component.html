@@ -1,0 +1,26 @@
+<div class="main-section">
+  <header></header>  
+
+  <!-- fund -->
+   <fund></fund>
+
+   <!-- loan amount -->
+   <slider [data]="{heading: 'Loan Amount', min: 1000000, max: 17400000, preFix: 'Rp'}" (valueEMit)="loanValue($event)" [value]="amout"></slider>
+
+   <!-- load peroid -->
+   <slider [data]="{heading: 'Loan Period', min: 6, max: 16, postFix: 'months'}" (valueEMit)="monthValue($event)" [value]="month"></slider>
+
+   <!-- footer section -->
+    <div class="footer">
+      <div class="footer-installment">
+        <p>Estimate monthly installment</p>
+        <h2>Rp {{installMent}}</h2>
+      </div>
+
+      <p class="footer-description">
+        After finishing the assignment, please ensure that you upload the separate  frontend and backend files to GitHub. Once uploaded, kindly share the links with us
+      </p>
+
+      <button (click)="saveAmount()">Apply Now</button>
+    </div>
+</div>

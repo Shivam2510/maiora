@@ -1,0 +1,17 @@
+
+<div class="slider">
+    <div class="slider-heading">
+        <p>{{data.heading}}</p>
+    <h3>{{data?.preFix}} {{formGroup.get('value')?.value}} {{data.postFix}}</h3>
+    </div>
+
+    <!-- slider -->
+    <form [formGroup]="formGroup">
+        <p-slider formControlName="value" [step]="1" [min]="data.min" [max]="data.max" (onChange)="changeSlider()" styleClass="w-14rem" />
+    </form>
+    <div class="slider-range">
+        <p>{{data.min}} {{data?.postFix}}</p>
+        <p>{{data.max}} {{data?.postFix}}</p>
+    </div>
+</div>
+
